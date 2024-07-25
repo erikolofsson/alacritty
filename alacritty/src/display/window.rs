@@ -495,6 +495,6 @@ fn use_srgb_color_space(window: &WinitWindow) {
 
     unsafe {
         let ns_window: id = msg_send![ns_view, window];
-        let _: () = msg_send![ns_window, setColorSpace: NSColorSpace::sRGBColorSpace(nil)];
+        let _: () = msg_send![ns_window, setColorSpace: NSColorSpace::displayP3ColorSpace(nil)];
     }
 }
